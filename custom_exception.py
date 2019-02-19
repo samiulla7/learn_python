@@ -18,18 +18,21 @@ class ValueTooLargeError(Error):
 number = 10
 
 while True:
-   try:
-       i_num = int(input("Enter a number: "))
-       if i_num < number:
-           raise ValueTooSmallError
-       elif i_num > number:
-           raise ValueTooLargeError
-       break
-   except ValueTooSmallError:
-       print("This value is too small, try again!")
-       print()
-   except ValueTooLargeError:
-       print("This value is too large, try again!")
-       print()
+    try:
+        i_num = int(input("Enter a number: "))
+        if i_num < number:
+            raise ValueTooSmallError
+        elif i_num > number:
+            raise ValueTooLargeError
+        break
+    except ValueTooSmallError:
+        print("This value is too small, try again!")
+        print()
+    except ValueTooLargeError:
+        print("This value is too large, try again!")
+        print()
+    except Exception as e:
+        print("This value is too large, try again!",e)
+        print()
 
 print("Congratulations! You guessed it correctly.")
