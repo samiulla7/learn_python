@@ -15,7 +15,7 @@ class ValueTooLargeError(Error):
 # user guesses a number until he/she gets it right
 
 # you need to guess this number
-number = 10
+number = 10 
 
 while True:
    try:

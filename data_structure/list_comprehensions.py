@@ -19,3 +19,22 @@ print([x for x in range(20) if x % 2 == 1])
 [x+y for x in ['Python ','C '] for y in ['Language','Programming']]
 # Output: ['Python Language', 'Python Programming', 'C Language', 'C Programming']
 
+
+
+# Suppose I want to flatten a given 2-D list:
+# matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+# Expected Output: flatten_matrix = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# 2-D List 
+matrix = [[1, 2, 3], [4, 5], [6, 7, 8, 9]] 
+flatten_matrix = [] 
+for sublist in matrix: 
+    for val in sublist: 
+        flatten_matrix.append(val) 
+print(flatten_matrix) 
+
+#with list comprehension
+# 2-D List 
+matrix = [[1, 2, 3], [4, 5], [6, 7, 8, 9]] 
+# Nested List Comprehension to flatten a given 2-D matrix 
+flatten_matrix = [val for sublist in matrix for val in sublist] 
+print(flatten_matrix) 
