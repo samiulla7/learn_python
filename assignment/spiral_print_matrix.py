@@ -17,7 +17,7 @@ def spiralPrint(m, n, a):
 		# Print the first row from
 		# the remaining rows
 		for i in range(l, n):
-			print(a[k][i], end=" ** ")
+            print(a[k][i], end=" ** ")
 
 		k += 1
 
@@ -50,6 +50,11 @@ def spiralPrint(m, n, a):
 a = [[1, 2, 3, 4, 5, 6],
 	[7, 8, 9, 10, 11, 12],
 	[13, 14, 15, 16, 17, 18]]
+a = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
 
 R = 3
 C = 6
